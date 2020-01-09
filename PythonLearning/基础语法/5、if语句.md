@@ -1,15 +1,22 @@
+---
+title: "Habits"
+author: John Doe
+date: March 22, 2005
+output: word_document
+---
+
 # if语句
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [if语句](#if%e8%af%ad%e5%8f%a5)
-  - [1、基础写法](#1%e5%9f%ba%e7%a1%80%e5%86%99%e6%b3%95)
-    - [1.1 if~else](#11-ifelse)
+- [if语句](#if语句)
+  - [1、基础写法](#1-基础写法)
+    - [1.1 if~else](#11-if~else)
     - [1.2 elif](#12-elif)
-    - [1.3 等值判断](#13-%e7%ad%89%e5%80%bc%e5%88%a4%e6%96%ad)
-    - [1.4 检查特定的值](#14-%e6%a3%80%e6%9f%a5%e7%89%b9%e5%ae%9a%e7%9a%84%e5%80%bc)
+    - [1.3 等值判断](#13-等值判断)
+    - [1.4 检查特定的值](#14-检查特定的值)
 
 <!-- /code_chunk_output -->
 
