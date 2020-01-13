@@ -13,5 +13,7 @@
 			"path": "C:\\Users\\11346\\OneDrive - RLS ,inc\\图床\\ImageBed"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PythonLearning"
+	}
 }
