@@ -29,10 +29,53 @@ npm create [ProjectName]
 
 ### 3、runtimeOnly 与 runtimeCompiler
 
-```js
-```
+#### 1、runtimOnly
 
-## 2、router 路由
+template -> vdom -> UI
+
+1. 性能更高
+2. 代码量更少
+
+#### 2、runtimeComplier
+
+template -> srt -> vdom -> UI
+
+## 2、路由发展过程
+
+### 1、后端渲染阶段
+
+
+### 2、前端渲染阶段
+
+##### 1、前后端分离
+
+![20200821092246](https://cdn.jsdelivr.net/gh/1134642046/ImageBed/JavaLearn/20200821092246.png)
+
+##### 2、SPA
+
+![20200821092513](https://cdn.jsdelivr.net/gh/1134642046/ImageBed/JavaLearn/20200821092513.png)
+
+## 3、url的hash与Html的history
+
+通过
+
+### 1、hash
+
+### 2、history
+
+`pushState`这个方法相当于将该路径压入栈中，通过`back()`弹出栈，也可以使用`go()`。
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/1134642046/ImageBed/JavaLearn/20200821094103.png" alt="back()">
+  <p>图3-1 back()</p>
+</div>
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/1134642046/ImageBed/JavaLearn/20200821095242.png" alt="go()">
+  <p>图3-2 go()</p>
+</div>
+
+## 4、router 路由
 
 ### 1、路由简单使用
 
@@ -246,13 +289,20 @@ export default{
 }
 ```
 
-### 6、
+### 6、router与route（待补充）
 
+router是
+route是当前处于活跃的路由
 
+### 7、导航守卫
+
+正如其名，vue-router 提供的导航守卫主要用来通过跳转或取消的方式守卫导航。有多种机会植入路由导航过程中：全局的, 单个路由独享的, 或者组件级的。
 
 ```js
 
 ```
+
+### 8、keep-alive
 
 ```js
 

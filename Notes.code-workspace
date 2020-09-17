@@ -23,10 +23,19 @@
 		},
 		{
 			"path": "JVMleanrnMD"
+		},
+		{
+			"path": "SpringBoot"
+		},
+		{
+			"path": "MongoDB"
+		},
+		{
+			"path": "Linux"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "PythonLearning",
+		"liveServer.settings.multiRootWorkspaceName": "VueLearn",
 		"picgo.picBed.current": "github"
 	}
 }
