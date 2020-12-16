@@ -1,0 +1,532 @@
+<!DOCTYPE html><html><head>
+      <title>9&#x3001;&#x7C7B;&#x7684;&#x4F7F;&#x7528;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8">&#x7C7B;&#x7684;&#x4F7F;&#x7528;</h1>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8">&#x7C7B;&#x7684;&#x4F7F;&#x7528;</a>
+<ul>
+<li><a href="#1-%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95">1&#x3001;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x53CA;&#x7B80;&#x5355;&#x7528;&#x6CD5;</a>
+<ul>
+<li><a href="#11-%E5%88%9B%E5%BB%BA%E7%B1%BB">1.1 &#x521B;&#x5EFA;&#x7C7B;</a></li>
+<li><a href="#12-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7">1.2 &#x4F7F;&#x7528;&#x6280;&#x5DE7;</a>
+<ul>
+<li><a href="#121-%E5%B1%9E%E6%80%A7%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC">1.2.1 &#x5C5E;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</a></li>
+<li><a href="#122-%E9%80%9A%E8%BF%87%E6%96%B9%E6%B3%95%E4%BF%AE%E6%94%B9%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC">1.2.2 &#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x503C;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2-%E7%BB%A7%E6%89%BF">2&#x3001;&#x7EE7;&#x627F;</a>
+<ul>
+<li><a href="#21-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">2.1 &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#22-%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95">2.2 &#x91CD;&#x5199;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;</a></li>
+</ul>
+</li>
+<li><a href="#3-%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7">3&#x3001;&#x7C7B;&#x7684;&#x5C5E;&#x6027;</a></li>
+<li><a href="#4-python%E6%A0%87%E5%87%86%E5%BA%93">4&#x3001;Python&#x6807;&#x51C6;&#x5E93;</a>
+<ul>
+<li><a href="#1-random%E6%A8%A1%E5%9D%97">1&#x3001;random&#x6A21;&#x5757;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="1-%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95">1&#x3001;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x53CA;&#x7B80;&#x5355;&#x7528;&#x6CD5;</h2>
+
+<h3 class="mume-header" id="11-%E5%88%9B%E5%BB%BA%E7%B1%BB">1.1 &#x521B;&#x5EFA;&#x7C7B;</h3>
+
+<p>&#x7C7B;&#x7684;&#x5173;&#x952E;&#x5B57;&#x4E3A;<code>class</code>,&#x7C7B;&#x4E2D;&#x5305;&#x542B;&#x5C5E;&#x6027;&#x4E0E;&#x65B9;&#x6CD5;&#xFF08;&#x5728;&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x79F0;&#x4E3A;&#x65B9;&#x6CD5;&#xFF09;</p>
+<div class="code-chunk" data-id="code-chunk-id-1" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, cmd}" class="language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+
+  <span class="token keyword">def</span> <span class="token function">sit</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&quot; is sit!&quot;</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">def</span> <span class="token function">rool_over</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>age<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&quot; is rool_over!&quot;</span><span class="token punctuation">)</span>
+
+my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">&quot;&#x5C0F;&#x5C0F;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;3&quot;</span><span class="token punctuation">)</span>
+my_dog<span class="token punctuation">.</span>sit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+my_dog<span class="token punctuation">.</span>rool_over<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><code>__init__()</code>&#xFF1A;<br>
+&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6BCF;&#x5F53;&#x4F60;&#x6839;&#x636E; Dog &#x7C7B;&#x521B;&#x5EFA;&#x65B0;&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;Python &#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x8FD0;&#x884C;&#x5B83;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;&#x4E2D;&#xFF0C;&#x5F00;&#x5934;&#x548C;&#x672B;&#x5C3E;&#x5404;&#x6709;&#x4E24;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x7EA6;&#x5B9A;&#xFF0C;&#x65E8;&#x5728;&#x907F;&#x514D; Python &#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;&#x4E0E;&#x666E;&#x901A;&#x65B9;&#x6CD5;&#x53D1;&#x751F;&#x540D;&#x79F0;&#x51B2;&#x7A81;&#x3002;</li>
+<li><code>.</code>&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#xFF1A;<br>
+&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</li>
+</ul>
+<h3 class="mume-header" id="12-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7">1.2 &#x4F7F;&#x7528;&#x6280;&#x5DE7;</h3>
+
+<h4 class="mume-header" id="121-%E5%B1%9E%E6%80%A7%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC">1.2.1 &#x5C5E;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</h4>
+
+<p>&#x7C7B;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x54EA;&#x6015;&#x8FD9;&#x4E2A;&#x503C;&#x662F;0&#x6216;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x6240;&#x4EE5;&#x6709;&#x65F6;&#x4F60;&#x53EF;&#x4E00;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x8FD9;&#x6837;&#x505A;&#x4E86;&#xFF0C;&#x5C31;&#x65E0;&#x9700;&#x5305;&#x542B;&#x4E3A;&#x5B83;&#x63D0;&#x4F9B;&#x521D;&#x59CB;&#x503C;&#x7684;&#x5F62;&#x53C2;&#x3002;</p>
+<div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=2, cmd}" class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">def</span> <span class="token function">read_odometer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;This car has &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>odometer_reading<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot; miles on it.&quot;</span><span class="token punctuation">)</span>
+my_new_car <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">&apos;audi&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;a4&apos;</span><span class="token punctuation">,</span> <span class="token number">2015</span><span class="token punctuation">)</span>
+my_new_car<span class="token punctuation">.</span>read_odometer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h4 class="mume-header" id="122-%E9%80%9A%E8%BF%87%E6%96%B9%E6%B3%95%E4%BF%AE%E6%94%B9%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC">1.2.2 &#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x503C;</h4>
+
+<p>&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x6765;&#x4FEE;&#x6539;&#x7C7B;&#x5185;&#x90E8;&#x7684;&#x503C;&#xFF0C;&#x66F4;&#x52A0;&#x5B89;&#x5168;&#xFF0C;&#x4E5F;&#x66F4;&#x52A0;&#x7684;&#x6E05;&#x6670;</p>
+<div class="code-chunk" data-id="code-chunk-id-3" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=3, cmd}" class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Initialize attributes to describe a car.&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">def</span> <span class="token function">update_odometer</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mileage<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        Set the odometer reading to the given value.
+        Reject the change if it attempts to roll the odometer back.
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">if</span> mileage <span class="token operator">&gt;=</span> self<span class="token punctuation">.</span>odometer_reading<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> mileage
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You can&apos;t roll back an odometer!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">read_odometer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Print a statement showing the car&apos;s mileage.&quot;&quot;&quot;</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;This car has &quot;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>odometer_reading<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot; miles on it.&quot;</span><span class="token punctuation">)</span>
+
+my_new_car <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">&apos;audi&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;a4&apos;</span><span class="token punctuation">,</span> <span class="token number">2015</span><span class="token punctuation">)</span>
+my_new_car<span class="token punctuation">.</span>update_odometer<span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span>
+my_new_car<span class="token punctuation">.</span>update_odometer<span class="token punctuation">(</span><span class="token number">22</span><span class="token punctuation">)</span>
+my_new_car<span class="token punctuation">.</span>read_odometer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="2-%E7%BB%A7%E6%89%BF">2&#x3001;&#x7EE7;&#x627F;</h2>
+
+<p>&#x5982;&#x679C;&#x4F60;&#x8981;&#x7F16;&#x5199;&#x7684;&#x7C7B;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x73B0;&#x6210;&#x7C7B;&#x7684;&#x7279;&#x6B8A;&#x7248;&#x672C;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x3002;&#x4E00;&#x4E2A;&#x7C7B;&#x7EE7;&#x627F;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x81EA;&#x52A8;&#x83B7;&#x5F97;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF1B;&#x539F;&#x6709;&#x7684;&#x7C7B;&#x79F0;&#x4E3A;&#x7236;&#x7C7B;&#xFF0C;&#x800C;&#x65B0;&#x7C7B;&#x79F0;&#x4E3A;&#x5B50;&#x7C7B;&#x3002;&#x5B50;&#x7C7B;&#x7EE7;&#x627F;&#x4E86;&#x5176;&#x7236;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 class="mume-header" id="21-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">2.1 &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h3>
+
+<p>&#x521B;&#x5EFA;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;Python&#x9996;&#x5148;&#x9700;&#x8981;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#x7ED9;&#x7236;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x3002;<code>super()</code>&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x51FD;&#x6570;&#xFF0C;&#x5E2E;&#x52A9;Python&#x5C06;&#x7236;&#x7C7B;&#x548C;&#x5B50;&#x7C7B;&#x5173;&#x8054;&#x8D77;&#x6765;&#x3002;&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x8BA9;Python&#x8C03;&#x7528;<code>ElectricCar</code>&#x7684;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;<code>__init__()</code>&#xFF0C;&#x8BA9;<code>ElectricCar</code>&#x5B9E;&#x4F8B;&#x5305;&#x542B;&#x7236;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x3002;&#x7236;&#x7C7B;&#x4E5F;&#x79F0;&#x4E3A;&#x8D85;&#x7C7B;&#xFF08;superclass&#xFF09;&#xFF0C;&#x540D;&#x79F0;<code>super</code>&#x56E0;&#x6B64;&#x800C;&#x5F97;&#x540D;&#x3002;</p>
+<div class="code-chunk" data-id="code-chunk-id-4" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=4, cmd}" class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Initialize attributes to describe a car.&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">def</span> <span class="token function">get_descriptive_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Return a neatly formatted descriptive name.&quot;&quot;&quot;</span>
+        long_name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>year<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>manufacturer <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model
+        <span class="token keyword">return</span> long_name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># &#x7EE7;&#x627F;&#x4E8E;Car</span>
+<span class="token keyword">class</span> <span class="token class-name">ElectricCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Models aspects of a car, specific to electric vehicles.&quot;&quot;&quot;</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        &quot;&quot;&quot;</span>
+        <span class="token comment"># &#x9700;&#x8981;&#x521D;&#x59CB;&#x5316;&#x7236;&#x7C7B;&#x7684;&#x5C5E;&#x6027;</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>battery <span class="token operator">=</span> <span class="token string">&quot;good&quot;</span>
+
+electricCar <span class="token operator">=</span> ElectricCar<span class="token punctuation">(</span><span class="token string">&apos;tesla&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;roadster&apos;</span><span class="token punctuation">,</span> <span class="token number">2015</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>electricCar<span class="token punctuation">.</span>get_descriptive_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>electricCar<span class="token punctuation">.</span>battery<span class="token punctuation">)</span>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h3 class="mume-header" id="22-%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95">2.2 &#x91CD;&#x5199;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;</h3>
+
+<p>&#x5B50;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E0E;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x540C;&#x540D;&#x7684;&#x65B9;&#x6CD5;&#x3002;Python&#x5C06;&#x4E0D;&#x4F1A;&#x8003;&#x8651;&#x8FD9;&#x4E2A;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x53EA;&#x5173;&#x6CE8;&#x4F60;&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x76F8;&#x5E94;&#x65B9;&#x6CD5;&#x3002;</p>
+<div class="code-chunk" data-id="code-chunk-id-5" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=5, cmd}" class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Initialize attributes to describe a car.&quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">def</span> <span class="token function">get_descriptive_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Return a neatly formatted descriptive name.&quot;&quot;&quot;</span>
+        long_name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>year<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>manufacturer <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model
+
+<span class="token keyword">class</span> <span class="token class-name">ElectricCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">,</span> code<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>code <span class="token operator">=</span> code
+
+  <span class="token keyword">def</span> <span class="token function">get_descriptive_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    long_name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>year<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>manufacturer <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>code<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> long_name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+electricCar <span class="token operator">=</span> ElectricCar<span class="token punctuation">(</span><span class="token string">&apos;tesla&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;roadster&apos;</span><span class="token punctuation">,</span> <span class="token number">2015</span><span class="token punctuation">,</span> <span class="token number">15715</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>electricCar<span class="token punctuation">.</span>get_descriptive_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>&#x5F53;&#x8C03;&#x7528;<code>get_descriptive_name</code>&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x56E0;&#x4E3A;ElectricCar&#x4E2D;&#x8986;&#x76D6;&#x4E86;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#x5B50;&#x7C7B;&#x4E2D;&#x7684;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 class="mume-header" id="3-%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7">3&#x3001;&#x7C7B;&#x7684;&#x5C5E;&#x6027;</h2>
+
+<ul>
+<li>
+<p>&#x7C7B;&#x7684;&#x79C1;&#x6709;&#x5C5E;&#x6027;<br>
+<code>__private_attrs&#xFF1A;</code>&#x4E24;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x58F0;&#x660E;&#x8BE5;&#x5C5E;&#x6027;&#x4E3A;&#x79C1;&#x6709;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x7C7B;&#x7684;&#x5916;&#x90E8;&#x88AB;&#x4F7F;&#x7528;&#x6216;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;(&#x62A5;&#x9519;&apos;ElectricCar&apos; object has no attribute &apos;__year&apos;)&#x3002;&#x5728;&#x7C7B;&#x5185;&#x90E8;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;&#x65F6; self.__private_attrs&#x3002;</p>
+</li>
+<li>
+<p>&#x7C7B;&#x7684;&#x79C1;&#x6709;&#x65B9;&#x6CD5;<br>
+<code>__private_method&#xFF1A;</code>&#x4E24;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x58F0;&#x660E;&#x8BE5;&#x65B9;&#x6CD5;&#x4E3A;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x7C7B;&#x7684;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x3002;&#x5728;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x8C03;&#x7528; self.__private_methods</p>
+</li>
+</ul>
+<div class="code-chunk" data-id="code-chunk-id-6" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=6, cmd}" class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> manufacturer<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>__year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_descriptive_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        long_name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>__year<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>manufacturer <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model
+        <span class="token keyword">return</span> long_name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">__get_descriptive_name2</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        long_name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>__year<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>manufacturer <span class="token operator">+</span> <span class="token string">&apos; &apos;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model
+        <span class="token keyword">return</span> long_name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+car <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">&apos;tesla&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;roadster&apos;</span><span class="token punctuation">,</span> <span class="token number">2015</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">.</span>get_descriptive_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">.</span>get_descriptive_name2<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> AttributeError<span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;AttributeError&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">.</span>__year<span class="token punctuation">)</span>
+
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">2015 Tesla Roadster
+AttributeError
+roadster
+Traceback (most recent call last):
+  File &quot;C:\Users\LiuZhihao\OneDrive\&#x7B14;&#x8BB0;\PythonLearning\&#x57FA;&#x7840;&#x8BED;&#x6CD5;\9&#x3001;&#x7C7B;&#x7684;&#x4F7F;&#x7528;\dktw2s39y_code_chunk.py&quot;, line 23, in <module>
+    print(car.__year)
+AttributeError: &apos;Car&apos; object has no attribute &apos;__year&apos;
+</module></pre></div></div><p>&#x5F53;&#x8C03;&#x7528;&#x7C7B;&#x4E2D;&#x7684;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x65F6;&#x4F1A;&#x62A5;<code>AttributeError</code>&#x5F02;&#x5E38;</p>
+<h2 class="mume-header" id="4-python%E6%A0%87%E5%87%86%E5%BA%93">4&#x3001;Python&#x6807;&#x51C6;&#x5E93;</h2>
+
+<h3 class="mume-header" id="1-random%E6%A8%A1%E5%9D%97">1&#x3001;random&#x6A21;&#x5757;</h3>
+
+<p>&#x6A21;&#x5757;random&#x5305;&#x542B;&#x4EE5;&#x5404;&#x79CD;&#x65B9;&#x5F0F;&#x751F;&#x6210;&#x968F;&#x673A;&#x6570;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D;&#x7684;randint()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4F4D;&#x4E8E;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;1&#xFF5E;6&#x5185;&#x7684;&#x6574;&#x6570;&#xFF1A;</p>
+<div class="code-chunk" data-id="code-chunk-id-7" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=7, cmd}" class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> randint
+
+x <span class="token operator">=</span> randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-8" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=8, cmd}" class="language-python"></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-9" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=9, cmd}" class="language-python"></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-10" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=10, cmd}" class="language-python"></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8">&#x7C7B;&#x7684;&#x4F7F;&#x7528;</a>
+<ul>
+<li><a href="#1-%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95">1&#x3001;&#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x53CA;&#x7B80;&#x5355;&#x7528;&#x6CD5;</a>
+<ul>
+<li><a href="#11-%E5%88%9B%E5%BB%BA%E7%B1%BB">1.1 &#x521B;&#x5EFA;&#x7C7B;</a></li>
+<li><a href="#12-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7">1.2 &#x4F7F;&#x7528;&#x6280;&#x5DE7;</a>
+<ul>
+<li><a href="#121-%E5%B1%9E%E6%80%A7%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC">1.2.1 &#x5C5E;&#x6027;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</a></li>
+<li><a href="#122-%E9%80%9A%E8%BF%87%E6%96%B9%E6%B3%95%E4%BF%AE%E6%94%B9%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC">1.2.2 &#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x503C;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2-%E7%BB%A7%E6%89%BF">2&#x3001;&#x7EE7;&#x627F;</a>
+<ul>
+<li><a href="#21-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">2.1 &#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#22-%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95">2.2 &#x91CD;&#x5199;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;</a></li>
+</ul>
+</li>
+<li><a href="#3-%E7%B1%BB%E7%9A%84%E5%B1%9E%E6%80%A7">3&#x3001;&#x7C7B;&#x7684;&#x5C5E;&#x6027;</a></li>
+<li><a href="#4-python%E6%A0%87%E5%87%86%E5%BA%93">4&#x3001;Python&#x6807;&#x51C6;&#x5E93;</a>
+<ul>
+<li><a href="#1-random%E6%A8%A1%E5%9D%97">1&#x3001;random&#x6A21;&#x5757;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
