@@ -32,10 +32,17 @@
 		},
 		{
 			"path": "Linux"
+		},
+		{
+			"path": "Nginx"
+		},
+		{
+			"path": "docker"
 		}
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "VueLearn",
-		"picgo.picBed.current": "github"
+		"picgo.picBed.current": "github",
+		"vue3snippets.enable-compile-vue-file-on-did-save-code": true
 	}
 }
